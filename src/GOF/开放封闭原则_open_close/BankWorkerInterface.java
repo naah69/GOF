@@ -1,4 +1,4 @@
-package GOF.开发关闭原则_open_close;
+package GOF.开放封闭原则_open_close;
 
 /**
  * 开发-封闭原则-接口
