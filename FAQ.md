@@ -80,11 +80,11 @@ Solution: Fastjson version has to be upgraded to rocketmq client dependent versi
 
 Messages can no longer be sent to this broker set, but if you have another broker set available, messages can still be sent given the topic is present. Messages can still be consumed from slaves.
 
-1. Some slave crash
+2. Some slave crash
 
 As long as there is another working slave, there will be no impact on sending messages. There will also be no impact on consuming messages except when the consumer group is set to consume from this slave preferably. By default, comsumer group consumes from master.
 
-1. All slaves crash
+3. All slaves crash
 
 There will be no impact on sending messages to master, but, if the master is SYNC_MASTER, producer will get a SLAVE_NOT_AVAILABLE indicating that the message is not sent to any slaves. There will also be no impact on consuming messages except that if the consumer group is set to consume from slave preferably. By default, comsumer group consumes from master.
 
